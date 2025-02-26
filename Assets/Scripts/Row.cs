@@ -25,4 +25,13 @@ public class Row : MonoBehaviour
     {
         cells[index].PushColour(newColor);
     }
+
+    //Turn the row and all of its cells on/off (triggered by the Game's activeIndexProperty)
+    public void SetState(bool state)
+    {
+        foreach (Cell cell in cells)
+        {
+            cell.SetState(state);
+        }
+    }
 }
