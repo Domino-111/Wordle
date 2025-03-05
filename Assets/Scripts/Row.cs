@@ -21,9 +21,9 @@ public class Row : MonoBehaviour
         return word;
     }
 
-    public void PushColour(int index, Color newColor)   //Receive a colour and push it into one of the cells
+    public void PushColour(int index, Color newColor, Cell.colourStates newState)   //Receive a colour and push it into one of the cells
     {
-        cells[index].PushColour(newColor);
+        cells[index].PushColour(newColor, newState);
     }
 
     //Turn the row and all of its cells on/off (triggered by the Game's activeIndexProperty)

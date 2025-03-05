@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e217604d4e3d85a479fc37c14905a675, type: 3}
+  m_Name: Standard
+  m_EditorClassIdentifier: 
+  backgroundColour: {r: 0.86666673, g: 0.81568635, b: 0.7137255, a: 1}
+  panelColour: {r: 1, g: 0.8588236, b: 0.5882353, a: 1}
+  rowColour: {r: 1, g: 0.654902, b: 0.28627452, a: 1}
+  cellColour: {r: 1, g: 1, b: 1, a: 1}
+  regularTextColour: {r: 0, g: 0, b: 0, a: 1}
+  hot: {r: 0, g: 0.8784314, b: 0.0627451, a: 1}
+  warm: {r: 1, g: 0.79607844, b: 0, a: 1}
+  cold: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}

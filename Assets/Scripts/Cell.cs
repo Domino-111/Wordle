@@ -6,9 +6,14 @@ public class Cell : MonoBehaviour
 {
     public TMP_InputField UIField;
 
+    //Enumerator to remember which state I'm in. Set by the Game/Row
+    public enum colourStates { Regular, Cold, Warm, Hot };
+    public colourStates myState;
+
     private void Awake()
     {
         UIField = GetComponent<TMP_InputField>();
+        myState = colourStates.Regular;
     }
 
     public char GetLetter()     //Get the character of the cell
@@ -16,11 +21,11 @@ public class Cell : MonoBehaviour
         return UIField.text.Length > 0 ? UIField.text[0] : '-';     //Return a '-' if the field is EMPTY
     }
 
-    public void PushColour(Color newColor)  //Change the colour of the cell block
+    public void PushColour(Color newColor, colourStates newState)  //Change the colour of the cell block
     {
-        //UIField.color = newColor;
-
         GetComponent<Image>().color = newColor;
+
+        myState = newState;
     }
 
     //Toggle interactable state (triggered by the Game's activeIndexProperty via the Row)

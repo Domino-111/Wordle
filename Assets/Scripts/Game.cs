@@ -36,6 +36,8 @@ public class Game : MonoBehaviour
         //GuessWord();
 
         activeIndexProperty = 0;
+
+        word = WordMaster.PopWord();
     }
 
     private void Update()
@@ -91,19 +93,19 @@ public class Game : MonoBehaviour
             if (word[i] == guess[i])    //Run when letter is correct and in correct spot
             {
                 //print("<color=green>They match!</color>");
-                activeRow.PushColour(i, hot);
+                activeRow.PushColour(i, hot, Cell.colourStates.Hot);
             }
 
             else if (word.Contains(guess[i]))   //Run when letter is in the word but wrong spot
             {
                 //print($"<color=yellow> The word contains the letter {guess[i]} </color>");
-                activeRow.PushColour(i, warm);
+                activeRow.PushColour(i, warm, Cell.colourStates.Warm);
             }
 
             else    //Run when letter doesn't exist in word
             {
                 //print($"<color=red> The word does not contain the letter {guess[i]} </color>");
-                activeRow.PushColour(i, cold);
+                activeRow.PushColour(i, cold, Cell.colourStates.Cold);
             }
         }
 
